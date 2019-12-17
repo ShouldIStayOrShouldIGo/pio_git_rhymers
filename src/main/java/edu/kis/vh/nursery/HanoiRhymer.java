@@ -2,9 +2,9 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    int totalRejected = 0;
+    private int totalRejected = 0;
 
-    public int reportRejected() {
+    int reportRejected() {
         return totalRejected;
     }
 
@@ -15,4 +15,4 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
     }
 }
-//alt+strzełaki pozwala poruszać się między otwartymi plikami projektu
+//alt+strzałki pozwalają poruszać się między otwartymi plikami projektu
