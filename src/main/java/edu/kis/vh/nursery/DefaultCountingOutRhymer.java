@@ -1,7 +1,10 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRhymer {
-IntArrayStack intArrayStack;
+import edu.kis.vh.nursery.methods.IntArrayStack;
+import edu.kis.vh.nursery.methods.StackInterface;
+
+public class DefaultCountingOutRhymer  {
+StackInterface intArrayStack = new IntArrayStack();
 
     public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
         this.intArrayStack = intArrayStack;
@@ -13,7 +16,7 @@ IntArrayStack intArrayStack;
 
 
     public IntArrayStack getIntArrayStack() {
-        return intArrayStack;
+        return (IntArrayStack) intArrayStack;
     }
 
     public void setIntArrayStack(IntArrayStack intArrayStack) {

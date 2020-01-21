@@ -1,12 +1,13 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.methods;
 
-public final class IntLinkedList {
 
-    private static final int DEFAULT_VALUE = -1;
+public final class IntLinkedList implements StackInterface {
+
     private Node last;
     private int i;
 
-    public void push(int i) {
+    @Override
+    public void countIn(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -20,17 +21,25 @@ public final class IntLinkedList {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
-    public int top() {
+    @Override
+    public boolean callCheck() {
+        return false;
+    }
+
+    @Override
+    public int peekaboo() {
         if (isEmpty())
             return DEFAULT_VALUE;
         return last.getValue();
     }
 
-    public int pop() {
+    @Override
+    public int countOut() {
         if (isEmpty())
             return DEFAULT_VALUE;
         int ret = last.getValue();
@@ -38,11 +47,13 @@ public final class IntLinkedList {
         return ret;
     }
 
-    public int getI() {
+    @Override
+    public int getTotal() {
         return i;
     }
 
-    public void setI(int i) {
+    @Override
+    public void setTotal(int i) {
         this.i = i;
     }
 }
